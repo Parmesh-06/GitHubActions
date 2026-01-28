@@ -9,12 +9,14 @@ jobs:
 
     test:
       runs-on: ubuntu-latest
+      needs: bulid
       steps:
         - name: Test the code
           run: echo "testing the code"
 
     Deploy:
       runs-on: ubuntu-latest
+      needs: test
       steps:
         - name: delpoy the code
           run: echo "deploy the code"
