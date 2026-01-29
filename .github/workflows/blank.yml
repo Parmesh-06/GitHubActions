@@ -14,8 +14,9 @@ jobs:
     Deploy:
         runs-on: ubuntu-latest
         steps:
-             -name: deploy step
-             run: echo "deploying the code"
-        
+          - name: deploy stage
+            run: echo "deploting the code"
+    
+            
              
          
