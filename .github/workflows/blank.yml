@@ -1,7 +1,7 @@
 name: GitHubActions Demo
 on: workflow_dispatch
 jobs:
-    bulid:
+    build:
       runs-on: ubuntu-latest
       steps:
         - name: Buliding the code
