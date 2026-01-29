@@ -12,10 +12,10 @@ jobs:
         - name: test phase
           run: echo "running the code"
     Deploy:
-        runs-on: ubuntu-latest
-        steps:
-          - name: deploy stage
-            run: echo "deploting the code"
+      runs-on: ubuntu-latest
+      steps:
+        - name: deploy stage
+          run: echo "deploting the code"
     
             
              
