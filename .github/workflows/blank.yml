@@ -1,23 +1,13 @@
-name: GitHubActions Demo
-on: workflow_dispatch
+name: GitHub Actions Demo
+on: push
 jobs:
-    build:
+    action-demo:
       runs-on: ubuntu-latest
       steps:
-        - name: Buliding the code
-          run: echo "code is bulid"
-    test:
-      runs-on: ubuntu-latest
-      needs: build
-      steps:
-        - name: test phase
-          run: echo "running the code"
-    deploy:
-      runs-on: ubuntu-latest
-      needs: test
-      steps:
-        - name: deploy stage
-          run: echo "deploting the code"
+        - name: checkout the code
+          uses: action/checkout@v6
+        - name: print the index.html file
+          run: cat index.html
     
             
              
