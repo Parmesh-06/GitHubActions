@@ -1,11 +1,21 @@
 name: GitHubActions Demo
-on: push
+on: workflow_dispatch
 jobs:
     bulid:
       runs-on: ubuntu-latest
       steps:
-        - name: Hello
-          run: |
-              echo "adding line one"
-              echo "adding second line"
-              echo "third line is also added"
+        - name: Buliding the code
+          run: echo "code is bulid"
+    Test:
+      runs-on: ubuntu-latest
+      steps:
+        - name: test phase
+          run: echo "running the code"
+    Deploy:
+        runs-on: ubuntu-latest
+        steps:
+             -name: deploy step
+             run: echo "deploying the code"
+        
+             
+         
