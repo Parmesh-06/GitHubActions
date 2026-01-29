@@ -4,20 +4,8 @@ jobs:
     bulid:
       runs-on: ubuntu-latest
       steps:
-        - name: building the code
-          run: echo "this code is bulided in step one"
-
-    test:
-      runs-on: ubuntu-latest
-      needs: bulid
-      steps:
-        - name: Test the code
-          run: echo "testing the code"
-
-    Deploy:
-      runs-on: ubuntu-latest
-      needs: test
-      steps:
-        - name: delpoy the code
-          run: echo "deploy the code"
-          
+        - name: Hello
+          run: |
+              echo "adding line one"
+              echo "adding second line"
+              echo "third line is also added"
