@@ -8,11 +8,13 @@ jobs:
           run: echo "code is bulid"
     Test:
       runs-on: ubuntu-latest
+      needs: build
       steps:
         - name: test phase
           run: echo "running the code"
     Deploy:
       runs-on: ubuntu-latest
+      needs: Test
       steps:
         - name: deploy stage
           run: echo "deploting the code"
