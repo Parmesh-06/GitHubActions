@@ -14,11 +14,11 @@ on:
       artifact_tag: 
         description: Choose the artifact
         required: true
-   jobs:
-     inputs-demo:
-       runs-on: ubuntu-latest
-       steps:
-         - name: deploy the app
-           run: Deploy the ${{ inputs.artifact_tag }} on the env ${{ inputs.environment }}
+jobs:
+  inputs-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy the app
+        run: Deploy the ${{ inputs.artifact_tag }} on the env ${{ inputs.environment }}
       
   
